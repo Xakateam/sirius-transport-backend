@@ -1,8 +1,8 @@
 import uvicorn
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     try:
-        config = uvicorn.Config(app='main:app', reload=True)
+        config = uvicorn.Config(app="main:app", reload=True)
         server = uvicorn.Server(config)
         server.run()
     except Exception as e:
