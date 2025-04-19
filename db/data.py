@@ -22,5 +22,3 @@ class Data:
     def load(self):
         for p in self.paths:
             self.data[p] = load_file(self.paths[p])
-
-            print(self.data)
