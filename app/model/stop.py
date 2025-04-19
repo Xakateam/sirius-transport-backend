@@ -1,8 +1,5 @@
-from typing import List
-
 from pydantic import BaseModel
 
-from app.model.bus import Bus
 
 
 # TODO: Check model correctness
