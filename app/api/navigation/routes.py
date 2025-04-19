@@ -11,4 +11,8 @@ gis_api = GisAPIClient()
 
 @router.post("/get")
 async def get_route(route: Route):
-    return get_rating(gis_api.get_route(route.geo_from, route.geo_to))
+    response = get_rating(gis_api.get_route(route.geo_from, route.geo_to))
+
+    return {
+        "data": response
+    }

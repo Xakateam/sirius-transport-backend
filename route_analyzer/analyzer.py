@@ -1,3 +1,5 @@
+from random import randint
+
 import requests
 
 from route_analyzer.sources import sources as data_sources
@@ -67,9 +69,18 @@ def get_rating(routes):
 
 
 def get_load(location):
-    request_pool = [requests.post(u, json={
-        "location": location
-    }) for u in data_sources]
-    responses = [req.json() for req in request_pool]
+    return randint(0, 50)
 
-    return [d["count"] for d in responses][0]
+    # request_pool = [requests.post(u, json={
+    #     "location": location
+    # }) for u in data_sources]
+    #
+    # responses = []
+    #
+    # for u in data_sources:
+    #     res = requests.post(u, json={
+    #         "location": location
+    #     })
+    #
+    #     responses.append(res.json())
+    # return [d["count"] for d in responses][0]
