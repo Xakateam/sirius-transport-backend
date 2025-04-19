@@ -12,7 +12,6 @@ class Data:
     def __init__(self):
         self.paths = {
             "buses": "buses.json",
-            "stops": "stops.json"
         }
 
         self.data = {}
